@@ -26,6 +26,8 @@ COPY supervisord.conf /etc/supervisord.conf
 RUN mkdir -p /var/run/php
 RUN mkdir -p /var/log/php-fpm
 
+RUN chmod 777 web/assets
+
 RUN service nginx stop
 
 EXPOSE 8080
